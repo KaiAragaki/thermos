@@ -7,7 +7,7 @@
 
 <!-- badges: end -->
 
-{thermos} provides a simple way to interact with ThermoFisher’s
+thermos provides a simple way to interact with ThermoFisher’s
 IonReporter API from within R.
 
 ## Installation
