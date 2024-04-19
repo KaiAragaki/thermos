@@ -1,10 +1,10 @@
 Package: thermos
-Title: What the Package Does (One Line, Title Case)
+Title: Interface with IonReporter from R
 Version: 0.0.0.9000
 Authors@R: 
     person("Kai", "Aragaki", , "adamaragaki@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-9458-0426"))
-Description: What the package does (one paragraph).
+Description: thermos allows you to use the IonReporter API with R
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en
