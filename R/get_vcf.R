@@ -1,4 +1,5 @@
-get_vcf <- function(type = c("sample", "analysis"),
+#' @export
+getvcf <- function(type = c("sample", "analysis"),
                     name = NULL,
                     id = NULL,
                     start_date = NULL,
@@ -20,4 +21,10 @@ get_vcf <- function(type = c("sample", "analysis"),
   out |>
     httr2::req_perform() |>
     httr2::resp_body_json()
+}
+
+
+#' @export
+get_vcf <- function(...) {
+  getvcf(...)
 }
