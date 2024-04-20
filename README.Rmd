@@ -57,4 +57,8 @@ Here's a decoder ring:
 | `startAnalysis`                               | `start_analysis`                                     |                        |
 | `unsharedAnalyses`                            | `unshared_analyses`                                  | `unshare_analyses`[^1] |
 
+Whenever possible, I've tried to maintain similar behavior between the API and the package, so hopefully you only have to learn one thing. In particular, default arguments should be the same as in the API.
+
+I *will* try my best to make the documentation a bit more detailed than the documentation provided by ThermoFisher.
+
 [^1]: [The documentation](https://ionreporter.thermofisher.com/ionreporter/help/GUID-DF029997-3B2F-44FB-8116-192689AE492D.html) is conflicted about the naming of this function, with the title saying 'unshare', the endpoint saying 'unshared', and the description saying 'unshares'. The intent implies it is a verb - 'to unshare' - so this function name makes more sense.
