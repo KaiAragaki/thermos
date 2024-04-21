@@ -8,10 +8,7 @@ getvcf <- function(type = c("sample", "analysis"),
                    exclude = NULL) {
   type <- rlang::arg_match(type)
   out <- default_req("getvcf") |>
-    httr2::req_headers(
-      `Content-Type` = "application/x-www-form-urlencoded",
-      Authorization = get_key()
-    ) |>
+    default_headers() |>
     httr2::req_url_query(
       format = "json", type = type, name = name, id = id,
       start_date = start_date, end_date = end_date, duration = duration,

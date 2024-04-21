@@ -11,10 +11,7 @@
 download_bam <- function(file_path, type = NULL) {
   type <- rlang::arg_match(type)
   default_req("downloadBAM") |>
-    httr2::req_headers(
-      `Content-Type` = "application/x-www-form-urlencoded",
-      Authorization = get_key()
-    ) |>
+    default_headers() |>
     httr2::req_url_query(filePath = file_path, type = type) |>
     httr2::req_perform() |>
     httr2::resp_body_json()
