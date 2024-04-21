@@ -10,8 +10,7 @@
 #' @export
 get_associated_bamfiles <- function(name, type = c("analysis", "sample")) {
   type <- rlang::arg_match(type)
-  end <- "https://ionreporter.thermofisher.com/api/v1/getAssociatedBamfiles"
-  httr2::request(end) |>
+  default_req("getAssociatedBamfiles") |>
     httr2::req_headers(
       `Content-Type` = "application/x-www-form-urlencoded",
       Authorization = get_key()

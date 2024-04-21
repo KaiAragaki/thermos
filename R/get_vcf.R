@@ -1,14 +1,13 @@
 #' @export
 getvcf <- function(type = c("sample", "analysis"),
-                    name = NULL,
-                    id = NULL,
-                    start_date = NULL,
-                    end_date = NULL,
-                    duration = NULL,
-                    exclude = NULL) {
+                   name = NULL,
+                   id = NULL,
+                   start_date = NULL,
+                   end_date = NULL,
+                   duration = NULL,
+                   exclude = NULL) {
   type <- rlang::arg_match(type)
-  end <- "https://ionreporter.thermofisher.com/api/v1/getvcf"
-  out <- httr2::request(end) |>
+  out <- default_req("getvcf") |>
     httr2::req_headers(
       `Content-Type` = "application/x-www-form-urlencoded",
       Authorization = get_key()
