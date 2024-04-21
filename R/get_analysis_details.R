@@ -20,7 +20,12 @@ get_analysis_details <- function(type = c("sample", "analysis"),
     httr2::resp_body_json()
   if (tidy && view == "summary") {
     out <- out |>
-      lapply(\(x) tibble::enframe(x) |> tidyr::pivot_wider()) |>
+      lapply(\(x) {
+        x |>
+          tibble::enframe(x) |>
+          tidyr::pivot_wider()
+      }
+      ) |>
       dplyr::bind_rows() |>
       tidyr::unnest(cols = dplyr::everything(), keep_empty = TRUE) |>
       tidyr::unnest(cols = dplyr::everything(), keep_empty = TRUE)
