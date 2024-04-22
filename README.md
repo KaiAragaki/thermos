@@ -62,6 +62,9 @@ Sometimes request query parameters are exposed that only have one
 options (mainly ‘format’, which only has the ‘json’ option). I won’t
 expose these arguments.
 
+This package will attempt coerce responses into sensible types, such as
+converting the response string `"true"` into the boolean `TRUE`
+
 1.  [The
     documentation](https://ionreporter.thermofisher.com/ionreporter/help/GUID-DF029997-3B2F-44FB-8116-192689AE492D.html)
     is conflicted about the naming of this function, with the title
