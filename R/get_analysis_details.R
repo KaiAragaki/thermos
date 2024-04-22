@@ -22,7 +22,7 @@ get_analysis_details <- function(type = c("sample", "analysis"),
     out <- out |>
       lapply(\(x) {
         x |>
-          tibble::enframe(x) |>
+          tibble::enframe() |>
           tidyr::pivot_wider()
       }
       ) |>
