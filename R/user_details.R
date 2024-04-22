@@ -5,5 +5,6 @@ get_user_details_with_auth <- function() {
       `Content-Type` = "application/x-www-form-urlencoded"
     ) |>
     httr2::req_url_query(auth = get_key()) |>
-    httr2::req_perform()
+    httr2::req_perform() |>
+    httr2::resp_body_json()
 }
