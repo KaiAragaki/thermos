@@ -1,15 +1,10 @@
 qcreport <- function(type = c("sample", "analysis"),
-                     name = NULL,
+                     name,
                      id = NULL,
                      start_date = NULL,
                      end_date = NULL,
                      view = NULL) {
   type <- rlang::arg_match(type)
-  if (type == "sample" && is.null(name)) {
-    cli::cli_abort(
-      "{.code name} must not be {.code NULL} when {.code type = \"sample\"}"
-    )
-  }
   default_req("qcreport") |>
     default_headers() |>
     httr2::req_url_query(
