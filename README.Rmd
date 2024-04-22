@@ -61,4 +61,6 @@ Whenever possible, I've tried to maintain similar behavior between the API and t
 
 I *will* try my best to make the documentation a bit more detailed than the documentation provided by ThermoFisher.
 
+Sometimes request query parameters are exposed that only have one options (mainly 'format', which only has the 'json' option). I won't expose these arguments.
+
 [^1]: [The documentation](https://ionreporter.thermofisher.com/ionreporter/help/GUID-DF029997-3B2F-44FB-8116-192689AE492D.html) is conflicted about the naming of this function, with the title saying 'unshare', the endpoint saying 'unshared', and the description saying 'unshares'. The intent implies it is a verb - 'to unshare' - so this function name makes more sense.
