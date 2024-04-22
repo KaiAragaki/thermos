@@ -1,12 +1,12 @@
-get_analysis_details <- function(type = c("sample", "analysis"),
-                                 name = NULL,
-                                 id = NULL,
-                                 start_date = NULL,
-                                 end_date = NULL,
-                                 duration = NULL,
-                                 exclude = NULL,
-                                 view = NULL,
-                                 tidy = TRUE) {
+analysis <- function(type = c("sample", "analysis"),
+                     name = NULL,
+                     id = NULL,
+                     start_date = NULL,
+                     end_date = NULL,
+                     duration = NULL,
+                     exclude = NULL,
+                     view = NULL,
+                     tidy = TRUE) {
   type <- rlang::arg_match(type)
   view <- ifelse(is.null(view), "", view)
   out <- default_req("analysis") |>
