@@ -12,7 +12,7 @@
 download <- function(file_path, type = NULL, dest = NULL) {
   if (is.null(dest)) {
     if (is.null(type)) {
-      dest <- tempfile(fileext = "zip")
+      dest <- tempfile(fileext = ".zip")
     } else {
       dest <- tempfile()
     }
